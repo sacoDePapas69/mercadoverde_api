@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}Quiénes somos{% endblock %}
+{% block body %}
+{% load static %}
+<br>
+<br>
+
+<div class="container">   
+    <div class="jumbotron " style = "background-color: rgb(228, 228, 228); padding: 2%;border-radius: 5px;">
+      <h2>Quiénes somos</h2>
+      <br>
+      <h4>
+          Somos una comunidad de vecinos con la intención de ayudar, comenzamos a 
+          vender nuestros productos de jardinería como maceteros, tierra de hojas,
+           flores y arbustos, todo esto para ayudar a una fundación sin fines de lucro.
+          <br>
+          <br>
+          Llevamos meses con este proyecto de ayudar y colaborar con buenas causas,
+           por lo tanto, comenzamos en redes sociales vendiendo nuestros productos,
+            pero luego de un tiempo las vendas comenzaron a aumentar por lo que tuvimos
+            que recurrir a una página web para expandir nuestro mercado y poder obtener
+             mayores recaudaciones.</h4>
+    </div>
+    </div>
+    <br>
+    <br>
+    <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.youtube.com/embed/iV4lxbpEaAY"
+          title="YouTube video"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <br>
+      <br>
+        <div class="container">
+          <div class="jumbotron " style = "background-color: rgb(228, 228, 228); padding: 2%;border-radius: 5px;">
+          <table>
+              <tr>
+                  <td><img src="{% static 'images/4544854-business-comerce-delivery-shop-truck_121454 (1).ico' %}" style="width: fit-content;height: 100px;"></td>
+                  <td><h4 style="padding-left: 5%;">Entrega en 24 horas en la región metropolitana</h4></td>
+              </tr>
+              </table>
+              <br>
+              <br>
+              <table>
+              <tr>
+              <td><img src="{% static 'images/4124869-badge-insignia-premium-badge-quality-star-badge_114113.ico' %}" style="width: fit-content;height: 80px;"></td>
+              <td><h4 style="padding-left: 10%;">Productos de alta calidad</h4></td>
+              </tr>
+              </table>
+              <br>
+              <br>
+              <table>
+              <tr>
+              <td><img src="{% static 'images/cellphone_79786.ico' %}"style="width: fit-content;height: 80px;"></td>
+              <td><h4 style="padding-left: 10%;">Atención al cliente online</h4></td>
+              </tr>
+              </table>
+          </div>
+          </div>
+      </div>
+      </div>
+      </div>
+      <br>
+      <br>
+{% endblock %}

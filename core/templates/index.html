@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}Bienvenido{% endblock %}
+{% block body %}
+{% load static %}
+<br>
+<br>
+<p class = "display-3 text-center"> CYBER DAY</p>
+    <p id = "clock" class="display-6 text-center"></p><section id="facilities" >
+    <table>
+        <tr>
+            <td style="width: 5%;">
+
+            </td>
+            <td>
+    <div class = "row row-cols-1 row-cols-md-3 g-4">
+        {% for product in products %}
+        <div class = "col">
+            <div class="card" style="border: none;">
+                {% if product.image %}
+                <img class='mx-auto img-thumbnail'
+                        src= "{{product.image.url}}"
+                         width="auto" height="auto"  style="border:none ;"/>
+                {% else %}
+                <img class='mx-auto img-thumbnail'
+                        src= "https://i.imgur.com/pjITBzX.jpg"
+                         width="auto" height="auto"  style="border:none ;"/>
+                {% endif %}
+                    <div class="card-body text-center mx-auto">
+                        <div class='cvp'>
+                            <h5 class="card-title font-weight-bold" style="font-weight:bold;"><a href = "#" style="text-decoration: none;color:black;">{{product.name}}</a></h5>
+                            <p class="card-text">$ {{product.price}}</p>
+                            <p class="card-text"><i class="bi bi-award-fill" style = "color: rgb(231, 228, 23);"></i>&nbsp;<i class="bi bi-flower1" style="color: rgb(169, 22, 189);"></i>&nbsp;<i class="bi bi-droplet-half" style="color: rgb(22, 122, 189);"></i>&nbsp;<i class="bi bi-house-heart-fill" style = "color: rgb(139, 46, 46);"></i>&nbsp;<i class="bi bi-brightness-high-fill" style = "color: rgba(219, 235, 2, 0.856);"></i>&nbsp;</p>     
+                        </div>
+                    </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+    </td>
+    <td style="width: 5%;"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <div class="container">
+        <div class="jumbotron " style = "background-color: rgb(228, 228, 228); padding: 2%;border-radius: 5px;">
+        <table>
+            <tr>
+                <td><img src="{% static 'images/4544854-business-comerce-delivery-shop-truck_121454 (1).ico' %}" style="width: fit-content;height: 100px;"></td>
+                <td><h4 style="padding-left: 5%;">Entrega en 24 horas en la región metropolitana</h4></td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <table>
+            <tr>
+            <td><img src="{% static 'images/4124869-badge-insignia-premium-badge-quality-star-badge_114113.ico' %}" style="width: fit-content;height: 80px;"></td>
+            <td><h4 style="padding-left: 10%;">Productos de alta calidad</h4></td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <table>
+            <tr>
+            <td><img src="{% static 'images/cellphone_79786.ico' %}"style="width: fit-content;height: 80px;"></td>
+            <td><h4 style="padding-left: 10%;">Atención al cliente online</h4></td>
+            </tr>
+            </table>
+        </div>
+        </div>
+        <br>
+    
+
+</section>
+<script src = "{% static 'js/countdown.js' %}"></script>{% endblock %}

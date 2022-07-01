@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Bienvenido{% endblock %}
+{% block body %}
+<br>
+<br>
+    <div class="container">
+
+        {% if user.is_authenticated  %}
+        <h2>Crear Producto</h2>
+        <div class="row">
+            <form enctype="multipart/form-data" method="POST" action="#" id="formulario">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ product_form.name.label }}
+                    {{ product_form.name }}
+                </div>
+
+                <div class="form-group">
+                    {{ product_form.price.label }}
+                    {{ product_form.price }}
+                </div>
+
+                <div class="form-group">
+                    {{ product_form.description.label }}
+                    {{ product_form.description }}
+                </div>
+
+                <div class="form-group">
+                    {{ product_form.image.label }}
+                    {{ product_form.image }}
+                </div>
+
+                <div class="form-group">
+                    {{ product_form.category.label }}
+                    {{ product_form.category }}
+                </div>
+
+                <br>
+                <input type="submit" class="btn btn-primary" value="Enviar">
+                <input type="reset" class="btn btn-danger" value="Limpiar">
+            </form>
+            {% else %}
+            <br>
+        <br>
+        <div class="text-center">
+        <h1>404</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+            {%endif%}
+        </div>
+    </div>
+<br>
+<br>
+{% endblock %}

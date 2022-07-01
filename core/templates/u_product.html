@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Bienvenido{% endblock %}
+{% block body %}
+<br>
+<br>
+    <div class="container">
+
+       
+       {% if user.is_authenticated  %}
+       <h2>Modificar</h2><br>
+        <div class="row">
+            <form enctype="multipart/form-data" method="POST" action="#" id="formulario">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{form.as_table}}
+                </div>
+                <br>
+            <input type="submit" class="btn btn-primary" value="Enviar">
+            <a href="{% url 'watch' %}" class="btn btn-success">Mostrar Productos</a>
+        </form>
+            {% else %}
+            <br>
+        <br>
+        <div class="text-center">
+        <h1>404</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+            {% endif %}
+    </div>
+    </div>
+    <br>
+    <br>
+{% endblock %}
